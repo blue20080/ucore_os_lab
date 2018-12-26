@@ -1,133 +1,42 @@
-INTRODUCTION
-============
-ucore os labs was used as OS Experiments in OS Course Of Dept. of Computer Science & Technology, Tsinghua University.
+# 介绍
 
-NEWS
-====
-- 2018.04.03：ucore os labs were ported on RISC-V(64bit) CPU（privileged arch spec 1.10). You can access [repo's riscv64-priv-1.10 branch](https://github.com/chyyuu/ucore_os_lab/tree/riscv64-priv-1.10). Thanks  Zhengxing Shi's great work!
-- 2018.03.18: Weixiao Huang provided https://github.com/weixiao-huang/silver-spoon to support os labs in docker environment on windows/macos/linux. [details](https://github.com/weixiao-huang/silver-spoon/tree/master/docs)
-- 2018.02.03：ucore os labs were ported on RISC-V(32bit) CPU（privileged arch spec 1.10). You can access [repo's riscv32-priv-1.10 branch](https://github.com/chyyuu/ucore_os_lab/tree/riscv32-priv-1.10). Thanks  Wei Zhang's great work!
-
-MAINTAINERS
-===========
-
-OS course for Dept. CS. in Tsinghua Univ., and MOOC OS course
------------------------------------
-- Chen, Yu: yuchen@tsinghua.edu.cn http://soft.cs.tsinghua.edu.cn/~chen
-- Yong, Xiang: xyong@tsinghua.edu.cn
-- Mao, Junjie: eternal.n08@gmail.com
-- Zhang, Wei: zhangwei15@mails.tsinghua.edu.cn
-
-CONTENTS
-========
-
-labs info
-----------------
-```
-lab0: preparing
-lab1: boot/protect mode/stack/interrupt
-lab2: physical memory management
-lab3: virtual memory management
-lab4: kernel thread management
-lab5: user process management
-lab6: scheduling
-lab7: mutex/sync
-lab8: filesystem
-```
-
-TESTED ENVIRONMENT
-==================
-```
-UBUNTU 14.04+: GCC-4.8.2+ CLANG-3.5+
-FEDORA 20+: GCC-4.8.2+
-```
-
-EXERCISE STEPS
-==============
-```
-0 Get the newest os lab src codes/docs.(Insure you can connect to github in ubuntu running on VrtualBox)
-0.1 If you try to get all codes
-  $rm -rf ucore_lab
-  $git clone git://github.com/chyyuu/ucore_os_lab.git
-  $cd ucore_lab
-0.2 If you gloned ucore_lab and only try to get the updated codes
-  $cd ucore_os_lab
-  $git pull
-1 $cd labX  
-2 read codes (specially the modified or added files)
-3 add your code
-4 compile your code
-  $make
-5 check your code
-  $make qemu
-OR
-  $make grade
-
-6 debug your code
-  $make debug
-
-7 handin your code
-  $make handin
-```
-
-OPTION
-==============
-Now, ucore suuport LLVM/Clang-3.5 + 
-in step4:
-  $ USELLVM=1 make
-then you will use clang to compile ucore
-
-GRADE/RANK
-==========
-```
-Superman: Finish all OS labs in one month by yourself
-Master: Finish all OS labs in two month by yourself
-Veteran: Finish all OS labs in three month by yourself
-Apprentice: Finish all OS labs in one semester with other guy's help
-```
- 
-RESOURCE REPOSITORY
-===================
-```
-Basic OS labs (for students who learn OS course)
-The newest lab codes and docs is in https://github.com/chyyuu/ucore_os_lab
-
-Advanced OS labs (for OS geeks or hackers or guys with Superman/Master Rank)
-The newest lab codes and docs is in https://github.com/chyyuu/ucore_plus
-```
+本仓库为《学堂在线-30240243X 操作系统》课程的练习题。
 
 
-UCORERS (Contributors)
-======================
+课程信息：[30240243X 操作系统（自主模式）]( http://www.xuetangx.com/courses/course-v1:TsinghuaX+30240243X+sp/courseware/eeab809fe92d45549033de97f84d8a7c/) 
 
-Junjie Mao, Yuheng Chen, Cong Liu, Yang Yang, Zhun Qu, Shengwei Ren, Wenlei Zhu, Cao Zhang, Tong Sen, Xu Chen, 
-Cang Nan, Yujian Fang, Wentao Han, Kaichen Zhang, Xiaolin Guo, Tianfan Xue, Gang Hu, Cao Liu, Yu Su,Xinhao Yuan, Wei Zhang, Kaixiang Lei...
+配套仓库地址，也是原仓库地址：https://github.com/chyyuu/ucore_os_lab
 
-Join us, OS research group in Tsinghua Univ.
-============================================
-If you are interested in OS Research/Development, we welcome you to joining our OS research group:
-- OS performance improvement for multicore architecture
-- fuzzing/symbolic execution technologies on OS for finding kernel bugs
-- improving performance and reliability on OS subsystem, such as device driver
-- design OS specification and build correct OS
-- OS & CPU(such as RISC-V）codesign
-- other topics about OS
 
-Just like [other great OS researchs ](https://github.com/chyyuu/aos_course/blob/master/readinglist.md)
+uCore OS实验指导书：https://chyyuu.gitbooks.io/ucore_os_docs/content/
 
-Send me email!
+# 背景
 
-OTHER INFO
-==========
-ucore is a teaching OS which is derived from xv6&jos in MIT, OS161 in Harvard and Linux.
+本人为一名已经参加工作5+年的IT从业者，从事大数据相关的开发工作，并没有系统的学习过Computer Sicence知识。在工作中涉及一些代码编码、系统调优从网上相关的资料，只能知道How（怎样做），但不知道Why（为何这样做）。故系统的学习操作系统知识。
 
-ucore was developed and used in Department of Computer Science & Technology, Institute for Interdisciplinary Information Sciences, Tsinghua University.
 
-The codes in the files that constitute xv6&jos are Copyright (2006-Current) Frans Kaashoek, Robert Morris, and Russ Cox and uses MIT License.
 
-The codes in the files that constitute OS/161 are written by David A. Holland.
+# 学习目标
 
-The codes in the files that constitute ucore are Copyright (2010-Current) Yu Chen, Naizheng Wang, Yong Xiang and uses GPL License.
+掌握OS设计实现、理解操作系统工作原理
 
-The documents in the files that constitute ucore are Copyright (2010-Current) Yu Chen, Yong Xiang and uses Creative Commons Attribution/Share-Alike (CC-BY-SA) License. 
+掌握内存管理、进程\线程管理、文件系统设计和实现
+
+
+
+# 学习记录
+
+| 日      期 | 学习内容                   | 使用资料、备注                                               |
+| ---------- | -------------------------- | ------------------------------------------------------------ |
+| 2018-02-01 | 计算机系统原理             | 《深入理解计算机操作系统》，泛读，对里面的一些知识点理解得不够深入，计划后续重读 |
+| 2018-03-20 | 在学堂在线观看操作系统课程 | 《[计算机操作系统（自主模式）](http://www.xuetangx.com/courses/course-v1:NJU+C1026+2016_T2/courseware)》另一门学堂在线的操作系统课程，对操作系统的知识点进行讲解，更多的是在理论上面，没有实践编码 |
+| 2018-12-13 | 温习C语言                  | 《21天学通C语言》                                            |
+| 2018-12-18 | 学习汇编                   | 《汇编语言（第2版》                                          |
+| 2018-12-23 | 开始学习操作系统课程       | 观看《[学堂在线-30240243X 操作系统](http://www.xuetangx.com/courses/course-v1:TsinghuaX+30240243X+sp/courseware/be5b8d4fec0c4c329d19845020bc67b2/39384cfa48f44ee8a99561f69f4db4a5/)》前面四讲、并进行lab1练习 |
+|            |                            |                                                              |
+|            |                            |                                                              |
+|            |                            |                                                              |
+|            |                            |                                                              |
+
+
 
